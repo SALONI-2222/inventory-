@@ -1,0 +1,117 @@
+/* Reset & base */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #8d8585, #979393);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container form */
+form {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Heading */
+form h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #383535; /* subtle red */
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+}
+
+/* Labels */
+form label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Inputs */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    outline: none;
+    border-color: #332d2d;
+    box-shadow: 0 0 8px rgba(44, 42, 42, 0.4);
+}
+
+/* Error message */
+.error {
+    background-color: #f8d7da;
+    color: #383535;
+    border: 1px solid #e2dadb;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #5e5b5b;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(57, 55, 55, 0.5);
+}
+
+button[type="submit"]:hover {
+    background-color: #6a5b5a;
+    box-shadow: 0 8px 15px rgba(87, 79, 79, 0.7);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    form {
+        padding: 25px 20px;
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* Simple fade-in-up animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
